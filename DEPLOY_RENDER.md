@@ -10,7 +10,10 @@
    - **Root Directory:** `backend`
    - **Environment:** Node
    - **Node Version:** Recomenda-se usar a versão LTS mais recente.
-4. **Variáveis de ambiente:** Adicione conforme necessário (exemplo: URL do banco de dados, porta, etc).
+4. **Variáveis de ambiente:**  
+   - Adicione conforme necessário (exemplo: URL do banco de dados, porta, etc).  
+   - **Importante:** Adicione a variável `RENDER_EXTERNAL_URL` com o valor da URL pública do backend gerada pelo Render.  
+     Isso garante que os links encurtados funcionem corretamente após o deploy.
 5. **Deploy:** Clique em "Create Web Service" e aguarde o build e deploy.
 
 ## Frontend (React + Vite)

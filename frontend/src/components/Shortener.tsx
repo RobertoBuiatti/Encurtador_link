@@ -17,7 +17,7 @@ const Shortener: React.FC = () => {
     setShortened(null);
     setAnalytics(null);
     try {
-      const res = await fetch("http://localhost:3001/api/shorten", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/shorten`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url }),
@@ -35,7 +35,7 @@ const Shortener: React.FC = () => {
 
   const fetchAnalytics = async (id: string) => {
     try {
-      const res = await fetch(`http://localhost:3001/api/analytics/${id}`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/analytics/${id}`);
       const data = await res.json();
       if (res.ok) {
         setAnalytics({ visits: data.visits });
